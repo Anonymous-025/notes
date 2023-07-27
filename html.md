@@ -3,7 +3,100 @@ Thursday
 
 # HTML5
 
-**HTML stands for HyperText Markup Language , which is a markup language used for creating web pages and web applications . It defines the structure and content of a web page, using tags and attributes to mark up elements such as headings, paragraphs, images, links, and more**
+HTML stands for **HyperText Markup Language** , which is a markup language used for creating web pages and web applications.  
+It defines the structure and content of a web page, using tags and attributes to mark up elements such as headings, paragraphs, images, links, and more
+
+# Structure of Html
+
+`<!DOCTYPE>` : This declaration specifies the version of HTML being used in the document  
+`<html>` : The `<html>` element is the root element of an HTML page. It contains all other elements of the page  
+`<head>` : The `<head>`element contains meta-information about the HTML document, such as the title of the page, links to external stylesheets or scripts, and other metadata  
+`<title>` : The `<title>`element is placed within the`<head>`element and defines the title of the HTML document, which is displayed in the browser's title bar or tab  
+`<body>` : The `<body>` element contains the visible content of the HTML document, such as headings, paragraphs, images, links, and other elements
+
+Example
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First HTML Page</title>
+  </head>
+  <body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a paragraph of text.</p>
+    <img src="image.jpg" alt="An image" />
+    <a href="https://www.example.com">Click here</a>
+  </body>
+</html>
+```
+
+## HTML Elements:
+
+- HTML elements are the building blocks of an HTML document.
+- Each HTML element is defined by a start tag, some content, and an end tag.  
+  Examples of HTML elements include `<h1>` for headings, `<p>` for paragraphs, `<img>` for images, and `<a>` for links
+- Some HTML elements, called empty elements, do not have an end tag, such as `<br>` for line breaks.
+
+## Nested HTML Elements:
+
+- HTML elements can be nested, meaning that elements can contain other elements.
+- Proper nesting requires that the entire nested element, including its markup, is within the start and end tags of the containing element (the parent)  
+  For example, you can nest a `<p>` element inside a `<div>` element:
+
+```html
+<div>
+  <p>This is a nested paragraph.</p>
+</div>
+```
+
+- Nesting allows for hierarchical structuring of content and applying multiple HTML tags to a single piece of content
+
+## Attributes:
+
+- HTML elements can also have attributes, which provide additional information about the element.
+- Attributes are specified within the start tag of an element and consist of a name and a value.  
+  For example, the `<img>` element has attributes like src (specifying the image source) and alt (providing alternative text for the image)
+- Attributes can be used to control the behavior, appearance, and functionality of HTML elements.
+
+# HTML Styles:
+
+- HTML styles are used to add visual formatting to HTML elements, such as color, font, size, and more
+- CSS (Cascading Style Sheets) is the language used to define the styles in HTML
+- CSS provides a wide range of properties and values that can be used to customize the appearance of HTML elements
+- Styles in HTML can be applied using different methods, including **inline styles**, **embedded styles**, and **external stylesheets**
+
+#### 1. **Inline Style:** In this method, the style attribute is used directly within the HTML start tag of an element. The style attribute includes a series of CSS property and value pairs separated by semicolons
+
+Example
+
+```html
+<p style="color: red; font-size: 18px;">
+  This is a red paragraph with a font size of 18 pixels.
+</p>
+```
+
+#### 2. **Embedded Style:** In this method, the style element is used within the `<head>` element of the HTML document. CSS rules are written inside the style element
+
+Example
+
+```html
+<head>
+  <style>
+    p {
+      color: blue;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <p>This is a blue paragraph with a font size of 20 pixels.</p>
+</body>
+```
+
+#### 3. **External Style:** In this method, the `<link>` element is used to link an external CSS file to the HTML document. The CSS rules are defined in the external file
+
+- It's important to note that while inline styles are quick and easy to implement, it is generally recommended to use external stylesheets for larger projects as they provide better organization and maintainability.
 
 ## Main Tags
 
@@ -179,3 +272,7 @@ Thursday
 Note that this is not an exhaustive list, and there may be other HTML tags that are not included here.
 
 ### Example / Syntax
+
+```
+
+```

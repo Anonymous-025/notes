@@ -1,12 +1,9 @@
-20-07-2023
-Thursday
-
 # HTML5
 
 HTML stands for **HyperText Markup Language** , which is a markup language used for creating web pages and web applications.  
 It defines the structure and content of a web page, using tags and attributes to mark up elements such as headings, paragraphs, images, links, and more
 
-# Structure of Html
+## Structure of Html
 
 `<!DOCTYPE>` : This declaration specifies the version of HTML being used in the document  
 `<html>` : The `<html>` element is the root element of an HTML page. It contains all other elements of the page  
@@ -59,7 +56,7 @@ Example
   For example, the `<img>` element has attributes like src (specifying the image source) and alt (providing alternative text for the image)
 - Attributes can be used to control the behavior, appearance, and functionality of HTML elements.
 
-# HTML Styles:
+## HTML Styles:
 
 - HTML styles are used to add visual formatting to HTML elements, such as color, font, size, and more
 - CSS (Cascading Style Sheets) is the language used to define the styles in HTML
@@ -96,7 +93,225 @@ Example
 
 #### 3. **External Style:** In this method, the `<link>` element is used to link an external CSS file to the HTML document. The CSS rules are defined in the external file
 
+```html
+<link rel="stylesheet" href="./style.css" />
+```
+
 - It's important to note that while inline styles are quick and easy to implement, it is generally recommended to use external stylesheets for larger projects as they provide better organization and maintainability.
+
+## HTML Links
+
+- HTML links are used to create clickable elements that allow users to navigate between different web pages or sections within a page.
+- The `<a>` tag is used to define a hyperlink, and the href attribute specifies the destination of the link
+
+```html
+<a href="https://www.example.com">Click here</a>
+```
+
+This link will display the text "Click here" and when clicked, it will navigate to the URL specified in the href attribute.
+
+### Image as a Link:
+
+You can use an image as a link by wrapping the `<img>` tag inside an `<a>` tag
+
+```html
+<a href="https://www.example.com">
+  <img src="image.jpg" alt="An image" />
+</a>
+```
+
+In this example, the image will be displayed, and when clicked, it will navigate to the URL specified in the href attribute.
+
+### Button as a Link:
+
+You can also use a button as a link by styling it to look like a link and adding an onclick attribute to handle the click event
+
+```html
+<button onclick="window.location.href='https://www.example.com'">
+  Click here
+</button>
+```
+
+When the button is clicked, it will navigate to the specified URL.
+
+### Link Bookmarks:
+
+- Link bookmarks, also known as anchor links, allow you to link to a specific section within the same web page.
+- To create a bookmark, you need to assign an id attribute to the element you want to link to, and then use the # symbol followed by the id in the href attribute of the link
+
+```html
+<h2 id="section1">Section 1</h2>
+<p>This is the content of section 1.</p>
+
+<a href="#section1">Go to Section 1</a>
+```
+
+In this example, clicking on the link will scroll the page to the section with the id "section1".
+
+### Image Maps:
+
+- Image maps allow you to define clickable areas on an image, where each area can link to a different destination.
+- Image maps are created using the `<map>`,` <area>`, and `<img>` tags.
+- The `<map>` tag defines the image map, the `<area>` tags define the clickable areas, and the `<img>` tag specifies the image to be used.
+
+```html
+<img src="image.jpg" alt="An image" usemap="#map" />
+
+<map name="map">
+  <area shape="rect" coords="0,0,100,100" href="link1.html" />
+  <area shape="circle" coords="150,150,50" href="link2.html" />
+</map>
+```
+
+In this example, the image is divided into two clickable areas: a rectangle and a circle. Clicking on each area will navigate to a different URL
+
+## HTML Lists
+
+- HTML lists are used to group a set of related items in an ordered or unordered form.  
+  There are three types of lists in HTML:
+
+### 1. Unordered List
+
+- This type of list is created using the `<ul>` tag and each item in the list is defined using the `<li>` tag.
+- Unordered lists have bullet points next to each item by default.
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
+
+### 2. Ordered List
+
+- This type of list is created using the `<ol>` tag and each item in the list is defined using the `<li>` tag.
+- Ordered lists have numbers next to each item by default.
+
+```html
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+```
+
+### 3. Description List
+
+- This type of list is created using the `<dl>` tag, the term or name for each item in the list is defined using the `<dt>` tag,  
+  and the description for each term is defined using the `<dd>` tag.
+
+```html
+<dl>
+  <dt>Term 1</dt>
+  <dd>Description 1</dd>
+  <dt>Term 2</dt>
+  <dd>Description 2</dd>
+</dl>
+```
+
+## HTML Tables
+
+- HTML tables allow web developers to arrange data into rows and columns.
+- A table in HTML consists of table cells inside rows and columns.
+- The basic structure of an HTML table is defined with the `<table> `tag, and each table row is defined with the `<tr>` tag
+- A table header is defined with the `<th>` tag, while a table data/cell is defined with the `<td>` tag
+
+```html
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+  </tr>
+</table>
+```
+
+| Company                    | Contact         |
+| -------------------------- | --------------- |
+| Alfreds Futterkiste        | Maria Anders    |
+| Centro comercial Moctezuma | Francisco Chang |
+
+The main HTML table tags are:
+
+- `<table>`: Defines a **table**.
+- `<tr>`: Defines a **table row**.
+- `<th>`: Defines a **table header** cell.
+- `<td>`: Defines a **table data** cell.
+- `<caption>`: Defines a table caption.
+- `<thead>`: Defines a group of header rows in a table.
+- `<tbody>`: Defines a group of body rows in a table.
+- `<tfoot>`: Defines a group of footer rows in a table.
+- `<col>`: Defines a column within a table and is used for applying styles to columns.
+- `<colgroup>`: Defines a group of one or more columns in a table for formatting purpose
+
+HTML tables provide the ability to control the **padding** and **spacing** between cells, as well as the ability to merge cells using the **colspan** and **rowspan** attributes.
+
+### Padding
+
+- The cellpadding attribute is used to define the **space between the border of a table cell and its contents**.
+- It specifies the whitespace between the cell edge and the content of the cell.
+- Default is 0
+  Here is an example:
+
+```html
+<table cellpadding="20">
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td>Cell 3</td>
+    <td>Cell 4</td>
+  </tr>
+</table>
+```
+
+![cellpadding](./images/cellpadding.png)
+
+### Spacing
+
+- The cellspacing attribute is used to define the space between cells, which means it specifies the whitespace between the edges of adjacent cells.
+- Default space is 2px
+  Here is an example:
+
+```html
+<table cellspacing="20">
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td>Cell 3</td>
+    <td>Cell 4</td>
+  </tr>
+</table>
+```
+
+![cellspacing](./images/cellspacing.png)
+
+### Colspan
+
+- The colspan attribute is used to make a cell span over multiple columns.
+- It specifies the number of columns that the cell should span.  
+   example:
+  ` <th colspan="2">Name</th>`  
+  ![Colspan](./images/colspan.png)
+
+### Rowspan
+
+- The rowspan attribute is used to make a cell span over multiple rows.
+- It specifies the number of rows that the cell should span.  
+  example:  
+  `<th rowspan="2">April</th>`  
+  ![Rowspan](./images/rowspan.png)
 
 ## Main Tags
 
@@ -269,9 +484,13 @@ Example
 - `<video>` : Defines a video.
 - `<wbr>` : Defines a possible line break.
 
-Note that this is not an exhaustive list, and there may be other HTML tags that are not included here.
+Note that this is not an exhaustive list, and there are other HTML tags that are not included here.
 
 ### Example / Syntax
+
+```
+
+```
 
 ```
 

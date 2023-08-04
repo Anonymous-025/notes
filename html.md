@@ -1,7 +1,7 @@
 # HTML5
 
 HTML stands for **HyperText Markup Language** , which is a markup language used for creating web pages and web applications.  
-It defines the structure and content of a web page, using tags and attributes to mark up elements such as headings, paragraphs, images, links, and more
+It defines the structure and content of a web page, using tags and attributes to mark up elements such as headings, paragraphs, images, links, and more.
 
 ## Structure of Html
 
@@ -55,6 +55,19 @@ Example
 - Attributes are specified within the start tag of an element and consist of a name and a value.  
   For example, the `<img>` element has attributes like src (specifying the image source) and alt (providing alternative text for the image)
 - Attributes can be used to control the behavior, appearance, and functionality of HTML elements.
+
+## HTML Layout Elements
+
+![html-layout](./images/html/htmlLayout.png)
+
+`<header>` - Defines a header for a document or a section  
+`<nav>` - Defines a set of navigation links  
+`<section>` - Defines a section in a document  
+`<article>` - Defines an independent, self-contained content  
+`<aside>` - Defines content aside from the content (like a sidebar)  
+`<footer> `- Defines a footer for a document or a section  
+`<details>` - Defines additional details that the user can open and close on demand  
+`<summary>` - Defines a heading for the `<details>` element
 
 ## HTML Styles:
 
@@ -258,7 +271,7 @@ HTML tables provide the ability to control the **padding** and **spacing** betwe
 
 - The cellpadding attribute is used to define the **space between the border of a table cell and its contents**.
 - It specifies the whitespace between the cell edge and the content of the cell.
-- Default is 0
+- Default is 0  
   Here is an example:
 
 ```html
@@ -279,7 +292,7 @@ HTML tables provide the ability to control the **padding** and **spacing** betwe
 ### Spacing
 
 - The cellspacing attribute is used to define the space between cells, which means it specifies the whitespace between the edges of adjacent cells.
-- Default space is 2px
+- Default space is 2px  
   Here is an example:
 
 ```html
@@ -301,8 +314,8 @@ HTML tables provide the ability to control the **padding** and **spacing** betwe
 
 - The colspan attribute is used to make a cell span over multiple columns.
 - It specifies the number of columns that the cell should span.  
-   example:
-  ` <th colspan="2">Name</th>`  
+   example:  
+  `<th colspan="2">Name</th>`  
   ![Colspan](./images/colspan.png)
 
 ### Rowspan
@@ -312,6 +325,122 @@ HTML tables provide the ability to control the **padding** and **spacing** betwe
   example:  
   `<th rowspan="2">April</th>`  
   ![Rowspan](./images/rowspan.png)
+
+## HTML iframes
+
+- An **inline frame** is used to embed another document within the current HTML document.
+
+  ```html
+  <iframe src="url" title="description"></iframe>
+  ```
+
+- iframes can be styled using CSS properties such as name, height, width, border, background-color, and more.
+
+## HTML File Paths
+
+- A file path describes the location of a file in a web site's folder structure.
+- The path is specified using the src, href, or data attribute of the relevant HTML tag.
+- File paths are used when linking to external files, like - Web pages, Images, Style sheets, JavaScripts
+
+### Absolute File Paths
+
+An absolute file path is the full URL to a file
+
+```html
+<img src="/images/picture.jpg" alt="Mountain" />
+```
+
+### Relative File Paths
+
+- A relative file path points to a file relative to the current page.
+
+| Path                              | Description                                                                           |
+| --------------------------------- | ------------------------------------------------------------------------------------- |
+| `<img src="picture.jpg">`         | The "picture.jpg" file is located in the same folder as the current page              |
+| `<img src="images/picture.jpg">`  | The "picture.jpg" file is located in the images folder in the current folder          |
+| `<img src="/images/picture.jpg">` | The "picture.jpg" file is located in the images folder at the root of the current web |
+| `<img src="../picture.jpg">`      | The "picture.jpg" file is located in the folder one level up from the current folder  |
+
+## HTML Responsive Web Design
+
+- Responsive web design is about creating web pages that look good on all devices!
+- A responsive web design will automatically adjust for different screen sizes and viewports.
+
+To create a responsive website, add the following `<meta>` tag to all your web pages:  
+Example
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+### Media Queries
+
+With media queries you can define completely different styles for different browser sizes.
+
+```CSS
+@media screen and (max-width: 800px){ /*properties*/}
+```
+
+#### Show Different Images Depending on Browser Width
+
+The HTML `<picture>` element allows you to define different images for different browser window sizes.
+
+```html
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)" />
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)" />
+  <source srcset="flowers.jpg" />
+  <img src="img_smallflower.jpg" alt="Flowers" />
+  <!-- used if source image is not accessible -->
+</picture>
+```
+
+## HTML Forms
+
+- The HTML `<form>` element is used to create an HTML form for user input.
+- Each form element has a name attribute that is used to identify the data that is being submitted.
+- The action attribute of the `<form>` tag specifies the URL of the script that will process the form data.
+- The method attribute of the `<form>` tag specifies the HTTP method that will be used to submit the form data, either GET or POST.
+- The enctype attribute of the `<form>` tag specifies the encoding type that will be used to submit the form data, either application/ x-www-form-urlencoded or multipart/form-data.
+
+```html
+<form>..... form elements ....</form>
+```
+
+### HTML Form Attributes
+
+#### The Action Attribute
+
+#### The Target Attribute
+
+#### The Method Attribute
+
+### HTML Input Types
+
+The default value of the type attribute is "text".
+
+- `<input type="button">`
+- `<input type="checkbox">`
+- `<input type="color">`
+- `<input type="date">`
+- `<input type="datetime-local">`
+- `<input type="email">`
+- `<input type="file">`
+- `<input type="hidden">`
+- `<input type="image">`
+- `<input type="month">`
+- `<input type="number">`
+- `<input type="password">` : defines a password field
+- `<input type="radio">`
+- `<input type="range">`
+- `<input type="reset">`
+- `<input type="search">`
+- `<input type="submit">`: defines a button for submitting form data to a form-handler
+- `<input type="tel">`
+- `<input type="text">` : defines a single-line text input field:
+- `<input type="time">`
+- `<input type="url">`
+- `<input type="week">`
 
 ## Main Tags
 
@@ -485,13 +614,3 @@ HTML tables provide the ability to control the **padding** and **spacing** betwe
 - `<wbr>` : Defines a possible line break.
 
 Note that this is not an exhaustive list, and there are other HTML tags that are not included here.
-
-### Example / Syntax
-
-```
-
-```
-
-```
-
-```

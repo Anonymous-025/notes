@@ -16,5 +16,6 @@ The company also does reports
 
 A company that sells free lemonade /water in ecofriendly bottles, putting ads of other company in the bottle/can.
 The company also provide customization of plates/glass/ bottle / etc at hotels/ shops/marriage/functions etc
+(idea from mykl)
 
 © copyright protected 2023

@@ -12,4 +12,9 @@ A company that deals with projects on electronics and software domain
 The company takes mini project, main project of electronics and software department of Engineering  
 The company also does reports
 
+## 3. FreeLemonade
+
+A company that sells free lemonade /water in ecofriendly bottles, putting ads of other company in the bottle/can.
+The company also provide customization of plates/glass/ bottle / etc at hotels/ shops/marriage/functions etc
+
 © copyright protected 2023
